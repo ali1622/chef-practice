@@ -6,5 +6,11 @@
 
 package "apache" do
    package_name "httpd"
-   action [:enable,  :start]
+   action :install
  end
+  
+service "apache" do
+   service_name "httpd" 
+   action [:start, :enable]
+end
+
